@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="dseg7classic_bolditalic.otf">
+            <string>DSEG7Classic-BoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackingTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xre-3x-5ee" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
+                                <rect key="frame" x="432" y="40" width="400" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Io0-5S-hfg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="czE-ZH-LOu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="lxE-G8-8a9"/>
+                                    <action selector="OnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oG-I1-3NJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-5R-OC9" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
+                                <rect key="frame" x="432" y="303" width="400" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="qT1-hq-CMT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnReset:" destination="BYZ-38-t0r" eventType="touchDown" id="CCv-mq-3oc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4l-7V-DXf">
+                                <rect key="frame" x="64" y="160" width="308" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="pNv-me-7ji"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DSEG7Classic-BoldItalic" family="DSEG7 Classic" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sport_stacking6_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="jDF-iQ-KdS">
+                                <rect key="frame" x="44" y="40" width="300" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Y1f-mh-6up"/>
+                                    <constraint firstAttribute="width" constant="300" id="wWu-dj-foT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hky-5R-OC9" secondAttribute="trailing" constant="20" id="050-2I-T7k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jDF-iQ-KdS" secondAttribute="bottom" constant="40" id="1rd-lq-HZe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xre-3x-5ee" secondAttribute="trailing" constant="20" id="8GM-QR-hyw"/>
+                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="44" id="Hl3-ay-vZQ"/>
+                            <constraint firstItem="Xre-3x-5ee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="TF2-8c-pSz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hky-5R-OC9" secondAttribute="bottom" constant="20" id="Tbn-8w-RMp"/>
+                            <constraint firstItem="n4l-7V-DXf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xym-Zk-BUG"/>
+                            <constraint firstItem="n4l-7V-DXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="sIz-6X-Unb"/>
+                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="uhE-K3-7MB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n4l-7V-DXf" secondAttribute="bottom" constant="160" id="wMB-fo-I2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ReadyButton" destination="Xre-3x-5ee" id="F1E-VB-9Nm"/>
+                        <outlet property="TimerLabel" destination="n4l-7V-DXf" id="EPt-cE-l2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="111.59420289855073"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sport_stacking6_white.png" width="553" height="790"/>
+    </resources>
+</document>

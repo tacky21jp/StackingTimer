@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FE681362257630B004ED465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE681352257630B004ED465 /* AppDelegate.swift */; };
+		9FE681382257630B004ED465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE681372257630B004ED465 /* ViewController.swift */; };
+		9FE6813B2257630B004ED465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681392257630B004ED465 /* Main.storyboard */; };
+		9FE6813E2257630B004ED465 /* StackingTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6813C2257630B004ED465 /* StackingTimer.xcdatamodeld */; };
+		9FE681402257630D004ED465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6813F2257630D004ED465 /* Assets.xcassets */; };
+		9FE681432257630D004ED465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681412257630D004ED465 /* LaunchScreen.storyboard */; };
+		9FE6814E2257630D004ED465 /* StackingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6814D2257630D004ED465 /* StackingTimerTests.swift */; };
+		9FE681592257630D004ED465 /* StackingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE681582257630D004ED465 /* StackingTimerUITests.swift */; };
+		9FE6816D2257656F004ED465 /* dseg7classic_bolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681662257656E004ED465 /* dseg7classic_bolditalic.otf */; };
+		9FE6816E2257656F004ED465 /* BGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE681672257656F004ED465 /* BGButton.swift */; };
+		9FE6816F2257656F004ED465 /* DSEG7Classic-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681682257656F004ED465 /* DSEG7Classic-BoldItalic.woff */; };
+		9FE681702257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681692257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 */; };
+		9FE681712257656F004ED465 /* dseg7classic_bolditalic.otf.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6816A2257656F004ED465 /* dseg7classic_bolditalic.otf.zip */; };
+		9FE681722257656F004ED465 /* GradationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6816B2257656F004ED465 /* GradationView.swift */; };
+		9FE681732257656F004ED465 /* DSEG7Classic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6816C2257656F004ED465 /* DSEG7Classic-BoldItalic.ttf */; };
+		9FE6817622579942004ED465 /* sport_stacking4_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6817422579941004ED465 /* sport_stacking4_red.png */; };
+		9FE6817722579942004ED465 /* sport_stacking6_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6817522579942004ED465 /* sport_stacking6_white.png */; };
+		9FE681792257A8A9004ED465 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 9FE681782257A8A6004ED465 /* AppIcon.appiconset */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FE6814A2257630D004ED465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FE6812A2257630B004ED465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FE681312257630B004ED465;
+			remoteInfo = StackingTimer;
+		};
+		9FE681552257630D004ED465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FE6812A2257630B004ED465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FE681312257630B004ED465;
+			remoteInfo = StackingTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FE681322257630B004ED465 /* StackingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE681352257630B004ED465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FE681372257630B004ED465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FE6813A2257630B004ED465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FE6813D2257630B004ED465 /* StackingTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StackingTimer.xcdatamodel; sourceTree = "<group>"; };
+		9FE6813F2257630D004ED465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FE681422257630D004ED465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FE681442257630D004ED465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE681492257630D004ED465 /* StackingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE6814D2257630D004ED465 /* StackingTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingTimerTests.swift; sourceTree = "<group>"; };
+		9FE6814F2257630D004ED465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE681542257630D004ED465 /* StackingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE681582257630D004ED465 /* StackingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingTimerUITests.swift; sourceTree = "<group>"; };
+		9FE6815A2257630D004ED465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE681662257656E004ED465 /* dseg7classic_bolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dseg7classic_bolditalic.otf; sourceTree = "<group>"; };
+		9FE681672257656F004ED465 /* BGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGButton.swift; sourceTree = "<group>"; };
+		9FE681682257656F004ED465 /* DSEG7Classic-BoldItalic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-BoldItalic.woff"; sourceTree = "<group>"; };
+		9FE681692257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-BoldItalic.woff2"; sourceTree = "<group>"; };
+		9FE6816A2257656F004ED465 /* dseg7classic_bolditalic.otf.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dseg7classic_bolditalic.otf.zip; sourceTree = "<group>"; };
+		9FE6816B2257656F004ED465 /* GradationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradationView.swift; sourceTree = "<group>"; };
+		9FE6816C2257656F004ED465 /* DSEG7Classic-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9FE6817422579941004ED465 /* sport_stacking4_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sport_stacking4_red.png; sourceTree = "<group>"; };
+		9FE6817522579942004ED465 /* sport_stacking6_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sport_stacking6_white.png; sourceTree = "<group>"; };
+		9FE681782257A8A6004ED465 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FE6812F2257630B004ED465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681462257630D004ED465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681512257630D004ED465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FE681292257630B004ED465 = {
+			isa = PBXGroup;
+			children = (
+				9FE681342257630B004ED465 /* StackingTimer */,
+				9FE6814C2257630D004ED465 /* StackingTimerTests */,
+				9FE681572257630D004ED465 /* StackingTimerUITests */,
+				9FE681332257630B004ED465 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FE681332257630B004ED465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FE681322257630B004ED465 /* StackingTimer.app */,
+				9FE681492257630D004ED465 /* StackingTimerTests.xctest */,
+				9FE681542257630D004ED465 /* StackingTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FE681342257630B004ED465 /* StackingTimer */ = {
+			isa = PBXGroup;
+			children = (
+				9FE681782257A8A6004ED465 /* AppIcon.appiconset */,
+				9FE6817422579941004ED465 /* sport_stacking4_red.png */,
+				9FE6817522579942004ED465 /* sport_stacking6_white.png */,
+				9FE681672257656F004ED465 /* BGButton.swift */,
+				9FE681662257656E004ED465 /* dseg7classic_bolditalic.otf */,
+				9FE6816A2257656F004ED465 /* dseg7classic_bolditalic.otf.zip */,
+				9FE6816C2257656F004ED465 /* DSEG7Classic-BoldItalic.ttf */,
+				9FE681682257656F004ED465 /* DSEG7Classic-BoldItalic.woff */,
+				9FE681692257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 */,
+				9FE6816B2257656F004ED465 /* GradationView.swift */,
+				9FE681352257630B004ED465 /* AppDelegate.swift */,
+				9FE681372257630B004ED465 /* ViewController.swift */,
+				9FE681392257630B004ED465 /* Main.storyboard */,
+				9FE6813F2257630D004ED465 /* Assets.xcassets */,
+				9FE681412257630D004ED465 /* LaunchScreen.storyboard */,
+				9FE681442257630D004ED465 /* Info.plist */,
+				9FE6813C2257630B004ED465 /* StackingTimer.xcdatamodeld */,
+			);
+			path = StackingTimer;
+			sourceTree = "<group>";
+		};
+		9FE6814C2257630D004ED465 /* StackingTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6814D2257630D004ED465 /* StackingTimerTests.swift */,
+				9FE6814F2257630D004ED465 /* Info.plist */,
+			);
+			path = StackingTimerTests;
+			sourceTree = "<group>";
+		};
+		9FE681572257630D004ED465 /* StackingTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FE681582257630D004ED465 /* StackingTimerUITests.swift */,
+				9FE6815A2257630D004ED465 /* Info.plist */,
+			);
+			path = StackingTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FE681312257630B004ED465 /* StackingTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE6815D2257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimer" */;
+			buildPhases = (
+				9FE6812E2257630B004ED465 /* Sources */,
+				9FE6812F2257630B004ED465 /* Frameworks */,
+				9FE681302257630B004ED465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StackingTimer;
+			productName = StackingTimer;
+			productReference = 9FE681322257630B004ED465 /* StackingTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FE681482257630D004ED465 /* StackingTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE681602257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimerTests" */;
+			buildPhases = (
+				9FE681452257630D004ED465 /* Sources */,
+				9FE681462257630D004ED465 /* Frameworks */,
+				9FE681472257630D004ED465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FE6814B2257630D004ED465 /* PBXTargetDependency */,
+			);
+			name = StackingTimerTests;
+			productName = StackingTimerTests;
+			productReference = 9FE681492257630D004ED465 /* StackingTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FE681532257630D004ED465 /* StackingTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE681632257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimerUITests" */;
+			buildPhases = (
+				9FE681502257630D004ED465 /* Sources */,
+				9FE681512257630D004ED465 /* Frameworks */,
+				9FE681522257630D004ED465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FE681562257630D004ED465 /* PBXTargetDependency */,
+			);
+			name = StackingTimerUITests;
+			productName = StackingTimerUITests;
+			productReference = 9FE681542257630D004ED465 /* StackingTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FE6812A2257630B004ED465 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = tacky21jp;
+				TargetAttributes = {
+					9FE681312257630B004ED465 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					9FE681482257630D004ED465 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9FE681312257630B004ED465;
+					};
+					9FE681532257630D004ED465 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9FE681312257630B004ED465;
+					};
+				};
+			};
+			buildConfigurationList = 9FE6812D2257630B004ED465 /* Build configuration list for PBXProject "StackingTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FE681292257630B004ED465;
+			productRefGroup = 9FE681332257630B004ED465 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FE681312257630B004ED465 /* StackingTimer */,
+				9FE681482257630D004ED465 /* StackingTimerTests */,
+				9FE681532257630D004ED465 /* StackingTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FE681302257630B004ED465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6816D2257656F004ED465 /* dseg7classic_bolditalic.otf in Resources */,
+				9FE681702257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 in Resources */,
+				9FE681432257630D004ED465 /* LaunchScreen.storyboard in Resources */,
+				9FE681792257A8A9004ED465 /* AppIcon.appiconset in Resources */,
+				9FE6816F2257656F004ED465 /* DSEG7Classic-BoldItalic.woff in Resources */,
+				9FE681402257630D004ED465 /* Assets.xcassets in Resources */,
+				9FE681712257656F004ED465 /* dseg7classic_bolditalic.otf.zip in Resources */,
+				9FE6813B2257630B004ED465 /* Main.storyboard in Resources */,
+				9FE681732257656F004ED465 /* DSEG7Classic-BoldItalic.ttf in Resources */,
+				9FE6817622579942004ED465 /* sport_stacking4_red.png in Resources */,
+				9FE6817722579942004ED465 /* sport_stacking6_white.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681472257630D004ED465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681522257630D004ED465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FE6812E2257630B004ED465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6813E2257630B004ED465 /* StackingTimer.xcdatamodeld in Sources */,
+				9FE681722257656F004ED465 /* GradationView.swift in Sources */,
+				9FE681382257630B004ED465 /* ViewController.swift in Sources */,
+				9FE6816E2257656F004ED465 /* BGButton.swift in Sources */,
+				9FE681362257630B004ED465 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681452257630D004ED465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6814E2257630D004ED465 /* StackingTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE681502257630D004ED465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE681592257630D004ED465 /* StackingTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FE6814B2257630D004ED465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FE681312257630B004ED465 /* StackingTimer */;
+			targetProxy = 9FE6814A2257630D004ED465 /* PBXContainerItemProxy */;
+		};
+		9FE681562257630D004ED465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FE681312257630B004ED465 /* StackingTimer */;
+			targetProxy = 9FE681552257630D004ED465 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FE681392257630B004ED465 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FE6813A2257630B004ED465 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FE681412257630D004ED465 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FE681422257630D004ED465 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FE6815B2257630D004ED465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FE6815C2257630D004ED465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FE6815E2257630D004ED465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FE6815F2257630D004ED465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9FE681612257630D004ED465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackingTimer.app/StackingTimer";
+			};
+			name = Debug;
+		};
+		9FE681622257630D004ED465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackingTimer.app/StackingTimer";
+			};
+			name = Release;
+		};
+		9FE681642257630D004ED465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackingTimer;
+			};
+			name = Debug;
+		};
+		9FE681652257630D004ED465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95RAJY8JND;
+				INFOPLIST_FILE = StackingTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackingTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FE6812D2257630B004ED465 /* Build configuration list for PBXProject "StackingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE6815B2257630D004ED465 /* Debug */,
+				9FE6815C2257630D004ED465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FE6815D2257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE6815E2257630D004ED465 /* Debug */,
+				9FE6815F2257630D004ED465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FE681602257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE681612257630D004ED465 /* Debug */,
+				9FE681622257630D004ED465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FE681632257630D004ED465 /* Build configuration list for PBXNativeTarget "StackingTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE681642257630D004ED465 /* Debug */,
+				9FE681652257630D004ED465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9FE6813C2257630B004ED465 /* StackingTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9FE6813D2257630B004ED465 /* StackingTimer.xcdatamodel */,
+			);
+			currentVersion = 9FE6813D2257630B004ED465 /* StackingTimer.xcdatamodel */;
+			path = StackingTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9FE6812A2257630B004ED465 /* Project object */;
+}
