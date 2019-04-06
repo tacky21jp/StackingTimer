@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //ReadyButton.cornerRadius = ReadyButton.frame.size.width/2
+        //ReadyButton2.cornerRadius = ReadyButton2.frame.size.width/2
     }
 
     @IBAction func OnTouchDown(_ sender: Any) {
