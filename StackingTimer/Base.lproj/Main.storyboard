@@ -24,18 +24,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xre-3x-5ee" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
-                                <rect key="frame" x="432" y="40" width="400" height="250"/>
+                                <rect key="frame" x="632" y="107" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Io0-5S-hfg"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="czE-ZH-LOu"/>
+                                    <constraint firstAttribute="height" constant="200" id="Io0-5S-hfg"/>
+                                    <constraint firstAttribute="width" constant="200" id="czE-ZH-LOu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="Ready">
+                                <state key="normal" title="Set">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -50,9 +50,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-5R-OC9" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
-                                <rect key="frame" x="432" y="303" width="400" height="70"/>
+                                <rect key="frame" x="348" y="303" width="200" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="qT1-hq-CMT"/>
+                                    <constraint firstAttribute="width" constant="200" id="qT1-hq-CMT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Reset">
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4l-7V-DXf">
-                                <rect key="frame" x="64" y="160" width="308" height="73"/>
+                                <rect key="frame" x="294" y="177" width="308" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="pNv-me-7ji"/>
                                 </constraints>
@@ -86,30 +86,69 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sport_stacking6_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="jDF-iQ-KdS">
-                                <rect key="frame" x="44" y="40" width="300" height="313"/>
+                                <rect key="frame" x="298" y="57" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Y1f-mh-6up"/>
                                     <constraint firstAttribute="width" constant="300" id="wWu-dj-foT"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFY-jE-CIH" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
+                                <rect key="frame" x="64" y="107" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MnP-UZ-UGk"/>
+                                    <constraint firstAttribute="width" constant="200" id="zd5-7L-QGz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Set">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cez-Zt-tCp"/>
+                                    <action selector="OnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbi-2N-exL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-wO-eeZ">
+                                <rect key="frame" x="294" y="97" width="308" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="MTD-Ic-6AL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hky-5R-OC9" secondAttribute="trailing" constant="20" id="050-2I-T7k"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jDF-iQ-KdS" secondAttribute="bottom" constant="40" id="1rd-lq-HZe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xre-3x-5ee" secondAttribute="trailing" constant="20" id="8GM-QR-hyw"/>
-                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="44" id="Hl3-ay-vZQ"/>
-                            <constraint firstItem="Xre-3x-5ee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="TF2-8c-pSz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hky-5R-OC9" secondAttribute="bottom" constant="20" id="Tbn-8w-RMp"/>
-                            <constraint firstItem="n4l-7V-DXf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xym-Zk-BUG"/>
-                            <constraint firstItem="n4l-7V-DXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="sIz-6X-Unb"/>
-                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="uhE-K3-7MB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n4l-7V-DXf" secondAttribute="bottom" constant="160" id="wMB-fo-I2e"/>
+                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Is-2v-fdj"/>
+                            <constraint firstItem="n4l-7V-DXf" firstAttribute="top" secondItem="0Fr-wO-eeZ" secondAttribute="bottom" constant="80" id="2ct-Nh-KbD"/>
+                            <constraint firstItem="0Fr-wO-eeZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="38g-gi-YUS"/>
+                            <constraint firstItem="n4l-7V-DXf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fi6-7s-LOl"/>
+                            <constraint firstItem="Xre-3x-5ee" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KWD-D5-P17"/>
+                            <constraint firstItem="jDF-iQ-KdS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ROU-LJ-xLq"/>
+                            <constraint firstItem="Hky-5R-OC9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UGF-DQ-Yg8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hky-5R-OC9" secondAttribute="bottom" constant="20" id="XyE-JC-6JS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xre-3x-5ee" secondAttribute="trailing" constant="20" id="gw9-dp-Qvb"/>
+                            <constraint firstItem="n4l-7V-DXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnC-ae-6Bw"/>
+                            <constraint firstItem="HFY-jE-CIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o0P-PV-CeO"/>
+                            <constraint firstItem="HFY-jE-CIH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xQs-ae-vF7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="MessageLabel" destination="0Fr-wO-eeZ" id="J1R-Zd-lpm"/>
                         <outlet property="ReadyButton" destination="Xre-3x-5ee" id="F1E-VB-9Nm"/>
+                        <outlet property="ReadyButton2" destination="HFY-jE-CIH" id="FYa-HO-cJQ"/>
                         <outlet property="TimerLabel" destination="n4l-7V-DXf" id="EPt-cE-l2N"/>
                     </connections>
                 </viewController>
