@@ -82,4 +82,10 @@ class BGButton: UIButton {
         imageView?.layer.zPosition = 0
         
     }
+    
+    override var isEnabled: Bool {
+        didSet {
+            alpha = isEnabled ? 1.0 : 0.5
+        }
+    }
 }

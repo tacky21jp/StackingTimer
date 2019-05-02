@@ -1,0 +1,6 @@
+framework module Pods_StackingTimerUITests {
+  umbrella header "Pods-StackingTimerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

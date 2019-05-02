@@ -1,0 +1,6 @@
+framework module Pods_StackingTimer {
+  umbrella header "Pods-StackingTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}

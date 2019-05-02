@@ -39,6 +39,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     var rewardBasedAd: GADRewardBasedVideoAd!
     var adRequestInProgress = false
     var adRedy = false
+    var challengeCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
             MessageLabel.text = ""
             ReadyButton.setTitle("Set",for: .normal)
             ReadyButton2.setTitle("Set",for: .normal)
+            ReadyButton.isEnabled = false
+            ReadyButton2.isEnabled = false
             pushFlag1 = false
             pushFlag1 = false
             status = 0
@@ -133,14 +136,17 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         TimerLabel.text = "00:00.00"
         MessageLabel.text = ""
         status = 0
-        
-        if rewardBasedAd.isReady == true {
+        challengeCount+=1
+        ReadyButton.isEnabled = true
+        ReadyButton2.isEnabled = true
+        ReadyButton.setTitle("Set",for: .normal)
+        ReadyButton2.setTitle("Set",for: .normal)
+
+        if challengeCount > 7 && rewardBasedAd.isReady == true {
             rewardBasedAd.present(fromRootViewController: self)
+            setupRewardBasedVideoAd()
+            challengeCount = 0
         }
-        
-        setupRewardBasedVideoAd()
- 
-        
     }
     
     // Amazon Affiliate
@@ -239,7 +245,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     }
     
     func setupRewardBasedVideoAd(){
-s        if !adRequestInProgress && rewardBasedAd?.isReady == false {
+        if !adRequestInProgress && rewardBasedAd?.isReady == false {
             rewardBasedAd?.load(GADRequest(),withAdUnitID: AdUnitID! )
             adRequestInProgress = true
         } else {

@@ -17,6 +17,8 @@
 		9F27D4A3227893A500F860BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A2227893A500F860BF /* AudioToolbox.framework */; };
 		9F27D4A5227893CB00F860BF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A4227893CB00F860BF /* iAd.framework */; };
 		9F27D4A7227894E300F860BF /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A6227894E300F860BF /* GoogleUtilities.framework */; };
+		9FBB4727227B513900310AC4 /* 564944.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB4725227B513800310AC4 /* 564944.png */; };
+		9FBB4728227B513900310AC4 /* 564943.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB4726227B513900310AC4 /* 564943.png */; };
 		9FBF63312259914A00674E57 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBF63302259914700674E57 /* JavaScriptCore.framework */; };
 		9FBF63332259929D00674E57 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBF63322259929800674E57 /* SafariServices.framework */; };
 		9FBF6335225992B500674E57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBF6334225992B100674E57 /* CoreGraphics.framework */; };
@@ -83,6 +85,8 @@
 		9F27D4A2227893A500F860BF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9F27D4A4227893CB00F860BF /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9F27D4A6227894E300F860BF /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FBB4725227B513800310AC4 /* 564944.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 564944.png; sourceTree = "<group>"; };
+		9FBB4726227B513900310AC4 /* 564943.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 564943.png; sourceTree = "<group>"; };
 		9FBF62B922598D0600674E57 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = "../Amazon-iOS-SDKs/AmazonMobileAds/AmazonAd.framework"; sourceTree = "<group>"; };
 		9FBF63302259914700674E57 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		9FBF63322259929800674E57 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -240,6 +244,8 @@
 		9FE681342257630B004ED465 /* StackingTimer */ = {
 			isa = PBXGroup;
 			children = (
+				9FBB4726227B513900310AC4 /* 564943.png */,
+				9FBB4725227B513800310AC4 /* 564944.png */,
 				9F27D497226B0F2000F860BF /* StackingTimer-Bridging-Header.h */,
 				9FE681782257A8A6004ED465 /* AppIcon.appiconset */,
 				9FE6817422579941004ED465 /* sport_stacking4_red.png */,
@@ -371,10 +377,12 @@
 			files = (
 				9FE6816D2257656F004ED465 /* dseg7classic_bolditalic.otf in Resources */,
 				9FE681702257656F004ED465 /* DSEG7Classic-BoldItalic.woff2 in Resources */,
+				9FBB4727227B513900310AC4 /* 564944.png in Resources */,
 				9FE681432257630D004ED465 /* LaunchScreen.storyboard in Resources */,
 				9FE681792257A8A9004ED465 /* AppIcon.appiconset in Resources */,
 				9FE6816F2257656F004ED465 /* DSEG7Classic-BoldItalic.woff in Resources */,
 				9FE681402257630D004ED465 /* Assets.xcassets in Resources */,
+				9FBB4728227B513900310AC4 /* 564943.png in Resources */,
 				9FE6813B2257630B004ED465 /* Main.storyboard in Resources */,
 				9FE681732257656F004ED465 /* DSEG7Classic-BoldItalic.ttf in Resources */,
 				9FE6817622579942004ED465 /* sport_stacking4_red.png in Resources */,
