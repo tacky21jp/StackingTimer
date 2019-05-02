@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVideoAdDelegate {
+    
     var nowTime: Double = Double()
     var elapsedTime: Double = Double()
     var displayTime: Double = Double()
@@ -21,16 +23,38 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ReadyButton: BGButton!
     @IBOutlet weak var ReadyButton2: BGButton!
+    @IBOutlet weak var ResetButton: BGButton!
     
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var MessageLabel: UILabel!
     
-
+    // For Amazon Ad
+    @IBOutlet var amazonAdView: AmazonAdView!
+    
+    // For Google AdMob
+    let AdMobID = "ca-app-pub-5694788749236517/8403644297"
+    let TEST_ID = "ca-app-pub-3940256099942544/1712485313"
+    let simulation = true
+    var AdUnitID:String? = nil
+    var rewardBasedAd: GADRewardBasedVideoAd!
+    var adRequestInProgress = false
+    var adRedy = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //ReadyButton.cornerRadius = ReadyButton.frame.size.width/2
-        //ReadyButton2.cornerRadius = ReadyButton2.frame.size.width/2
+        // Amazon Affiliate Loading
+        loadAmazonAd()
+        
+        // Google AdMob Loading
+        if simulation {
+            AdUnitID = TEST_ID
+        } else{
+            AdUnitID = AdMobID
+        }
+        rewardBasedAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBasedAd.delegate = self
+        rewardBasedAd.load(GADRequest(), withAdUnitID: AdUnitID!)
+
     }
 
     @IBAction func OnTouchDown(_ sender: Any) {
@@ -57,15 +81,6 @@ class ViewController: UIViewController {
             status = 0
 
         }
-        /*
-        if(MessageLabel.text == "Ready"){
-            TimerLabel.text = "00:00.00"
-            MessageLabel.text = "★Ready★"
-        } else {
-            timer.invalidate()
-            MessageLabel.text = "Ready"
-        }
-        */
     }
     
     @IBAction func OnTouchUp(_ sender: Any) {
@@ -92,21 +107,6 @@ class ViewController: UIViewController {
             displayTime = (elapsedTime + savedTime) - nowTime
             reloadText()
         }
-        
-        /*
-        if(MessageLabel.text == "★Ready★"){
-            nowTime = NSDate.timeIntervalSinceReferenceDate
-            timer = Timer.scheduledTimer(timeInterval: 1/100, target: self, selector: #selector(stopWatch), userInfo: nil, repeats: true)
-
-            ReadyButton.setTitle("Stop",for: .normal)
-        } else if(ReadyButton.currentTitle == "Stop"){
-            elapsedTime = NSDate.timeIntervalSinceReferenceDate
-            displayTime = (elapsedTime + savedTime) - nowTime
-            
-            reloadText()
-            //ReadyButton.setTitle("Ready",for: .normal)
-        }
-         */
     }
     
     func reloadText(){
@@ -133,6 +133,118 @@ class ViewController: UIViewController {
         TimerLabel.text = "00:00.00"
         MessageLabel.text = ""
         status = 0
+        
+        if rewardBasedAd.isReady == true {
+            rewardBasedAd.present(fromRootViewController: self)
+        }
+        
+        setupRewardBasedVideoAd()
+ 
+        
+    }
+    
+    // Amazon Affiliate
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil, completion: { (context) -> Void in
+            // Reload Amazon Ad upon rotation.
+            // Important: Amazon expandable rich media ads target landscape and portrait mode separately.
+            // If your app supports device rotation events, your app must reload the ad when rotating between portrait and landscape mode.
+            self.loadAmazonAd();
+        });
+    }
+    
+    @IBAction func loadAmazonAd(){
+        if ((amazonAdView) != nil) {
+            amazonAdView.removeFromSuperview()
+            amazonAdView = nil
+        }
+        
+        // Initialize Auto Ad Size View
+        let adFrame: CGRect = CGRect(x: 0, y: (ResetButton.frame.origin.y + ResetButton.frame.size.height + 5) / 2, width: UIScreen.main.bounds.size.width, height: 90);
+        amazonAdView = AmazonAdView.init(frame: adFrame)
+        amazonAdView.autoresizingMask = [.flexibleWidth, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
+        amazonAdView.setHorizontalAlignment(.center)
+        amazonAdView.setVerticalAlignment(.fitToContent)
+        
+        // Register the ViewController with the delegate to receive callbacks.
+        amazonAdView.delegate = self
+        
+        // Set Ad Loading Options & Load Ad
+        let options = AmazonAdOptions()
+        options.isTestRequest = true
+        amazonAdView.loadAd(options)
+    }
+    
+    // MARK: AmazonAdViewDelegate
+    func viewControllerForPresentingModalView() -> UIViewController {
+        return self
+    }
+    
+    func adViewDidLoad(_ view: AmazonAdView!) -> Void {
+        // Add the newly created Amazon Ad view to our view.
+        self.view.addSubview(amazonAdView)
+    }
+    
+    func adViewDidFail(toLoad view: AmazonAdView!, withError: AmazonAdError!) -> Void {
+        Swift.print("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+    }
+    
+    func adViewWillExpand(_ view: AmazonAdView!) -> Void {
+        Swift.print("Ad will expand")
+    }
+    
+    func adViewDidCollapse(_ view: AmazonAdView!) -> Void {
+        Swift.print("Ad has collapsed")
+    }
+
+    // Google AdMob
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+                            didRewardUserWith reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        adRequestInProgress = false
+    }
+    
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
+        print("Reward based video ad is received.")
+        adRequestInProgress = false
+        adRedy = true
+    }
+    
+    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Opened reward based video ad.")
+    }
+    
+    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad started playing.")
+    }
+    
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad has completed.")
+    }
+    
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad is closed.")
+        setupRewardBasedVideoAd()
+    }
+    
+    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad will leave application.")
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+                            didFailToLoadWithError error: Error) {
+        print("Reward based video ad failed to load.")
+    }
+    
+    func setupRewardBasedVideoAd(){
+s        if !adRequestInProgress && rewardBasedAd?.isReady == false {
+            rewardBasedAd?.load(GADRequest(),withAdUnitID: AdUnitID! )
+            adRequestInProgress = true
+        } else {
+            print("Error: setup RewardBasedVideoAd")
+        }
     }
 }
 

@@ -149,6 +149,7 @@
                         <outlet property="MessageLabel" destination="0Fr-wO-eeZ" id="J1R-Zd-lpm"/>
                         <outlet property="ReadyButton" destination="Xre-3x-5ee" id="F1E-VB-9Nm"/>
                         <outlet property="ReadyButton2" destination="HFY-jE-CIH" id="FYa-HO-cJQ"/>
+                        <outlet property="ResetButton" destination="Hky-5R-OC9" id="nBa-YF-nDu"/>
                         <outlet property="TimerLabel" destination="n4l-7V-DXf" id="EPt-cE-l2N"/>
                     </connections>
                 </viewController>

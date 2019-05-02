@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "start:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "rewardBasedAd?.isReady">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.OnReset(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rewardBasedAd.isReady">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.loadAmazonAd():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIScreen.main.bounds.size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
