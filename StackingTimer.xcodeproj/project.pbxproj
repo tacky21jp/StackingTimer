@@ -684,9 +684,9 @@
 			baseConfigurationReference = 2C0E7072D6E8D19D9F22123F /* Pods-StackingTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 95RAJY8JND;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M4VQ92VYMK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AmazonAd/AmazonMobileAds-ios-2.2.15.1-SDK",
@@ -702,9 +702,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AmazonAd/AmazonMobileAds-ios-2.2.15.1-SDK/AmazonAd.framework/Versions/A",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.pj12ykcat.StackingTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "pj12ykcat StackingTimer";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackingTimer/StackingTimer-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -717,9 +717,9 @@
 			baseConfigurationReference = 04D118BBEE8E58CDE4E28AB0 /* Pods-StackingTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 95RAJY8JND;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M4VQ92VYMK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AmazonAd/AmazonMobileAds-ios-2.2.15.1-SDK",
@@ -735,9 +735,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AmazonAd/AmazonMobileAds-ios-2.2.15.1-SDK/AmazonAd.framework/Versions/A",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tacky21jp.StackingTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.pj12ykcat.StackingTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "pj12ykcat StackingTimer";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackingTimer/StackingTimer-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

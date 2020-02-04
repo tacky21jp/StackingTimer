@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,15 +18,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xre-3x-5ee" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
-                                <rect key="frame" x="583" y="157" width="259" height="100"/>
+                                <rect key="frame" x="818" y="462" width="528" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Drg-tJ-xrt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
                                 <state key="normal" title="Set">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -49,11 +47,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-5R-OC9" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
-                                <rect key="frame" x="348" y="261" width="200" height="70"/>
+                                <rect key="frame" x="558" y="566" width="250" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="qT1-hq-CMT"/>
+                                    <constraint firstAttribute="width" constant="250" id="zvU-oU-Nnr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -76,7 +74,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4l-7V-DXf">
-                                <rect key="frame" x="323" y="183" width="250" height="48"/>
+                                <rect key="frame" x="558" y="488" width="250" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="pNv-me-7ji"/>
                                 </constraints>
@@ -85,18 +83,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sport_stacking6_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="jDF-iQ-KdS">
-                                <rect key="frame" x="298" y="57" width="300" height="300"/>
+                                <rect key="frame" x="533" y="362" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Y1f-mh-6up"/>
                                     <constraint firstAttribute="width" constant="300" id="wWu-dj-foT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFY-jE-CIH" customClass="BGButton" customModule="StackingTimer" customModuleProvider="target">
-                                <rect key="frame" x="54" y="157" width="259" height="100"/>
+                                <rect key="frame" x="20" y="462" width="528" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="gr8-66-Awv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
                                 <state key="normal" title="Set">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -117,21 +118,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-wO-eeZ">
-                                <rect key="frame" x="294" y="153" width="308" height="0.0"/>
+                                <rect key="frame" x="529" y="458" width="308" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="MTD-Ic-6AL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageTouchLeft" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-FP-RMB">
-                                <rect key="frame" x="112" y="190" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageTouchLeft" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-FP-RMB">
+                                <rect key="frame" x="367" y="487" width="200" height="150"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageTouchRight" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-n9-kor">
-                                <rect key="frame" x="543" y="190" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageTouchRight" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-n9-kor">
+                                <rect key="frame" x="799" y="487" width="200" height="150"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,19 +140,25 @@
                             <constraint firstItem="0Fr-wO-eeZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="38g-gi-YUS"/>
                             <constraint firstItem="Xre-3x-5ee" firstAttribute="leading" secondItem="n4l-7V-DXf" secondAttribute="trailing" constant="10" id="BCg-hU-o9i"/>
                             <constraint firstItem="n4l-7V-DXf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fi6-7s-LOl"/>
-                            <constraint firstItem="Xre-3x-5ee" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KWD-D5-P17"/>
-                            <constraint firstItem="HFY-jE-CIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PuC-pZ-n1N"/>
-                            <constraint firstItem="n4l-7V-DXf" firstAttribute="leading" secondItem="HFY-jE-CIH" secondAttribute="trailing" constant="10" id="QiV-vz-BBs"/>
+                            <constraint firstItem="t4X-n9-kor" firstAttribute="centerX" secondItem="0Fr-wO-eeZ" secondAttribute="centerX" constant="216" id="GTD-CA-iUI"/>
+                            <constraint firstItem="Xre-3x-5ee" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HPt-SW-Adf"/>
+                            <constraint firstItem="wpT-FP-RMB" firstAttribute="centerY" secondItem="HFY-jE-CIH" secondAttribute="centerY" constant="50" id="HZZ-bh-FJa"/>
+                            <constraint firstItem="HFY-jE-CIH" firstAttribute="trailing" secondItem="n4l-7V-DXf" secondAttribute="leading" constant="-10" id="IgD-JW-KMH"/>
+                            <constraint firstItem="HFY-jE-CIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mj6-Eh-uxO"/>
                             <constraint firstItem="jDF-iQ-KdS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ROU-LJ-xLq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xre-3x-5ee" secondAttribute="trailing" constant="10" id="SH2-Q6-2PG"/>
                             <constraint firstItem="Hky-5R-OC9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UGF-DQ-Yg8"/>
+                            <constraint firstItem="HFY-jE-CIH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hLM-ZC-vRn"/>
                             <constraint firstItem="n4l-7V-DXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnC-ae-6Bw"/>
                             <constraint firstItem="Hky-5R-OC9" firstAttribute="top" secondItem="n4l-7V-DXf" secondAttribute="bottom" constant="30" id="nGd-TM-h3i"/>
-                            <constraint firstItem="HFY-jE-CIH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xQs-ae-vF7"/>
+                            <constraint firstItem="t4X-n9-kor" firstAttribute="centerY" secondItem="Xre-3x-5ee" secondAttribute="centerY" constant="50" id="tfk-mM-Sde"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xre-3x-5ee" secondAttribute="trailing" constant="20" id="tt5-eO-RCl"/>
+                            <constraint firstItem="wpT-FP-RMB" firstAttribute="centerX" secondItem="0Fr-wO-eeZ" secondAttribute="centerX" constant="-216" id="tyA-FJ-uOO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ImageTouchLeft" destination="wpT-FP-RMB" id="uWa-3u-Xsb"/>
+                        <outlet property="ImageTouchRight" destination="t4X-n9-kor" id="J8H-rn-PXE"/>
                         <outlet property="MessageLabel" destination="0Fr-wO-eeZ" id="J1R-Zd-lpm"/>
                         <outlet property="ReadyButton" destination="Xre-3x-5ee" id="F1E-VB-9Nm"/>
                         <outlet property="ReadyButton2" destination="HFY-jE-CIH" id="FYa-HO-cJQ"/>

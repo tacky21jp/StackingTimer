@@ -27,6 +27,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var MessageLabel: UILabel!
+    @IBOutlet weak var ImageTouchLeft: UIImageView!
+    @IBOutlet weak var ImageTouchRight: UIImageView!
     
     // For Amazon Ad
     @IBOutlet var amazonAdView: AmazonAdView!
@@ -34,7 +36,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     // For Google AdMob
     let AdMobID = "ca-app-pub-5694788749236517/8403644297"
     let TEST_ID = "ca-app-pub-3940256099942544/1712485313"
-    let simulation = true
+    let simulation = false
     var AdUnitID:String? = nil
     var rewardBasedAd: GADRewardBasedVideoAd!
     var adRequestInProgress = false
@@ -72,6 +74,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
             status = 1
             TimerLabel.text = "00:00.00"
             MessageLabel.text = "★Ready★"
+            ImageTouchLeft.isHidden = true
+            ImageTouchRight.isHidden = true
         } else if(status == 2){
             timer.invalidate()
             MessageLabel.text = ""
