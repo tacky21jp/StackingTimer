@@ -3,18 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "start:(null)">
-         <PersistentStrings>
-            <PersistentString
-               value = "rewardBasedAd?.isReady">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "ViewController.OnReset(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "rewardBasedAd.isReady">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.setupRewardBasedVideoAd():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rewardBasedAd?.isReady">
+            </PersistentString>
+            <PersistentString
+               value = "adRequestInProgress">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "start:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "rewardBasedAd?.isReady">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

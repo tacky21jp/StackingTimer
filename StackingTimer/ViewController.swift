@@ -246,6 +246,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
                             didFailToLoadWithError error: Error) {
         print("Reward based video ad failed to load.")
+        adRequestInProgress = false
     }
     
     func setupRewardBasedVideoAd(){

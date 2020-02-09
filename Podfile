@@ -6,7 +6,7 @@ target 'StackingTimer' do
   use_frameworks!
 
   # Pods for StackingTimer
-  pod 'AmazonAd', '~> 2.2'
+  pod 'AmazonAd'
   pod 'Google-Mobile-Ads-SDK'
 
   target 'StackingTimerTests' do
