@@ -14,10 +14,10 @@
          contextName = "ViewController.setupRewardBasedVideoAd():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "rewardBasedAd?.isReady">
+               value = "adRequestInProgress">
             </PersistentString>
             <PersistentString
-               value = "adRequestInProgress">
+               value = "rewardBasedAd?.isReady">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -33,7 +33,16 @@
          contextName = "ViewController.loadAmazonAd():ViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "UIScreen.main.bounds.size.height">
+            </PersistentString>
+            <PersistentString
                value = "UIScreen.main.bounds.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "ResetButton.frame.origin.y">
+            </PersistentString>
+            <PersistentString
+               value = "ResetButton.frame.size.height">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -36,7 +36,6 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     // For Google AdMob
     let AdMobID = "ca-app-pub-5694788749236517/8403644297"
     let TEST_ID = "ca-app-pub-3940256099942544/1712485313"
-    let simulation = false
     var AdUnitID:String? = nil
     var rewardBasedAd: GADRewardBasedVideoAd!
     var adRequestInProgress = false
@@ -49,15 +48,21 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         loadAmazonAd()
         
         // Google AdMob Loading
-        if simulation {
-            AdUnitID = TEST_ID
-        } else{
+        #if (!arch(i386) && !arch(x86_64))
+            // 実機
             AdUnitID = AdMobID
-        }
+        #else
+            // シミュレータ
+            AdUnitID = TEST_ID
+        #endif
         rewardBasedAd = GADRewardBasedVideoAd.sharedInstance()
         rewardBasedAd.delegate = self
         rewardBasedAd.load(GADRequest(), withAdUnitID: AdUnitID!)
 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        amazonAdView.frame.origin.y = ResetButton.frame.origin.y + ResetButton.frame.size.height + 10
     }
 
     @IBAction func OnTouchDown(_ sender: Any) {
@@ -171,7 +176,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         }
         
         // Initialize Auto Ad Size View
-        let adFrame: CGRect = CGRect(x: 0, y: (ResetButton.frame.origin.y + ResetButton.frame.size.height + 5) / 2, width: UIScreen.main.bounds.size.width, height: 90);
+        let adFrame: CGRect = CGRect(x: 0, y: Int((ResetButton.frame.origin.y + ResetButton.frame.size.height + 5)/2), width: Int(UIScreen.main.bounds.size.width), height: 90);
         amazonAdView = AmazonAdView.init(frame: adFrame)
         amazonAdView.autoresizingMask = [.flexibleWidth, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
         amazonAdView.setHorizontalAlignment(.center)
@@ -182,7 +187,13 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         
         // Set Ad Loading Options & Load Ad
         let options = AmazonAdOptions()
-        options.isTestRequest = true
+        #if (!arch(i386) && !arch(x86_64))
+            // 実機
+            options.isTestRequest = false
+        #else
+            // シミュレータ
+            options.isTestRequest = true
+        #endif
         amazonAdView.loadAd(options)
     }
     
