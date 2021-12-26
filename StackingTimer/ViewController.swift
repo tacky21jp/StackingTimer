@@ -9,8 +9,8 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVideoAdDelegate {
-    
+class ViewController: UIViewController, GADFullScreenContentDelegate/* GADRewardBasedVideoAdDelegate , AmazonAdViewDelegate*/{
+
     var nowTime: Double = Double()
     var elapsedTime: Double = Double()
     var displayTime: Double = Double()
@@ -31,13 +31,17 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     @IBOutlet weak var ImageTouchRight: UIImageView!
     
     // For Amazon Ad
-    @IBOutlet var amazonAdView: AmazonAdView!
+    //@IBOutlet var amazonAdView: AmazonAdView!
     
     // For Google AdMob
     let AdMobID = "ca-app-pub-5694788749236517/8403644297"
-    let TEST_ID = "ca-app-pub-3940256099942544/1712485313"
+    let TEST_ID = "ca-app-pub-8123415297019784/4985798738"
     var AdUnitID:String? = nil
-    var rewardBasedAd: GADRewardBasedVideoAd!
+
+    var interstitial: GADInterstitialAd?
+    var rewardedAd: GADRewardedAd?
+    // old
+    //var rewardBasedAd: GADRewardBasedVideoAd!
     var adRequestInProgress = false
     var adRedy = false
     var challengeCount = 0
@@ -45,7 +49,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     override func viewDidLoad() {
         super.viewDidLoad()
         // Amazon Affiliate Loading
-        loadAmazonAd()
+        //loadAmazonAd()
         
         // Google AdMob Loading
         #if (!arch(i386) && !arch(x86_64))
@@ -55,16 +59,39 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
             // シミュレータ
             AdUnitID = TEST_ID
         #endif
+        
+        //rewardedAd = GADRewardedAd(adUnitID: AdUnitID)
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: AdUnitID!,
+                    request: request,
+                    completionHandler: { (ad, error) in
+            if let error = error {
+              print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+              return
+            }
+            self.interstitial = ad
+            self.interstitial?.fullScreenContentDelegate = self
+          }
+        )
+        // old
+        /*
         rewardBasedAd = GADRewardBasedVideoAd.sharedInstance()
         rewardBasedAd.delegate = self
         rewardBasedAd.load(GADRequest(), withAdUnitID: AdUnitID!)
-
+         */
     }
-    
+    /*
     override func viewDidLayoutSubviews() {
         amazonAdView.frame.origin.y = ResetButton.frame.origin.y + ResetButton.frame.size.height + 10
     }
-
+    */
+    func showInterstitial() {
+      if let ad = interstitial {
+        ad.present(fromRootViewController: self)
+      } else {
+        print("Ad wasn't ready")
+      }
+    }
     @IBAction func OnTouchDown(_ sender: Any) {
         let btn = sender as! BGButton
         if( btn == ReadyButton){
@@ -151,13 +178,37 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         ReadyButton.setTitle("Set",for: .normal)
         ReadyButton2.setTitle("Set",for: .normal)
 
+        /*
         if challengeCount > 7 && rewardBasedAd.isReady == true {
             rewardBasedAd.present(fromRootViewController: self)
             setupRewardBasedVideoAd()
             challengeCount = 0
         }
+         */
+        if challengeCount > 7 {
+            if let ad = interstitial {
+                let request = GADRequest()
+                GADInterstitialAd.load(withAdUnitID: AdUnitID!,
+                            request: request,
+                            completionHandler: { (ad, error) in
+                    if let error = error {
+                      print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                      return
+                    }
+                    self.interstitial = ad
+                    self.interstitial?.fullScreenContentDelegate = self
+                  }
+                )
+                
+                ad.present(fromRootViewController: self)
+                self.challengeCount = 0
+            } else {
+              print("Ad wasn't ready")
+            }
+        }
     }
-    
+
+    /*
     // Amazon Affiliate
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -218,9 +269,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
     func adViewDidCollapse(_ view: AmazonAdView!) -> Void {
         Swift.print("Ad has collapsed")
     }
-
+    */
     // Google AdMob
-    
+    /*
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
                             didRewardUserWith reward: GADAdReward) {
         print("Reward received with currency: \(reward.type), amount \(reward.amount).")
@@ -267,6 +318,19 @@ class ViewController: UIViewController, AmazonAdViewDelegate, GADRewardBasedVide
         } else {
             print("Error: setup RewardBasedVideoAd")
         }
+    }
+     */
+    
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("Ad did present full screen content.")
+    }
+
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+      print("Ad failed to present full screen content with error \(error.localizedDescription).")
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("Ad did dismiss full screen content.")
     }
 }
 

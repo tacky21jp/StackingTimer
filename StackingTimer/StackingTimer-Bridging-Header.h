@@ -9,7 +9,9 @@
 // limitations under the License.
 
 #import <UIKit/UIKit.h>
+/*
 #import <AmazonAd/AmazonAdRegistration.h>
 #import <AmazonAd/AmazonAdView.h>
 #import <AmazonAd/AmazonAdError.h>
 #import <AmazonAd/AmazonAdOptions.h>
+*/

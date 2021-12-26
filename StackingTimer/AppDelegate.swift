@@ -18,13 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        AmazonAdRegistration.shared().setAppKey("9f689b04a71a4121b27716c725e649f4")
-        AmazonAdRegistration.shared().setLogging(true)
+        //AmazonAdRegistration.shared().setAppKey("9f689b04a71a4121b27716c725e649f4")
+        //AmazonAdRegistration.shared().setLogging(true)
         
         // Google AdMob
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        /*
+         // old
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
             withAdUnitID: "ca-app-pub-5694788749236517/8403644297")
+         */
         return true
+         
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
