@@ -14,7 +14,6 @@
 		9F27D4A12278939300F860BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A02278939300F860BF /* AVFoundation.framework */; };
 		9F27D4A3227893A500F860BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A2227893A500F860BF /* AudioToolbox.framework */; };
 		9F27D4A5227893CB00F860BF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F27D4A4227893CB00F860BF /* iAd.framework */; };
-		9FB98DEA23F016730041A1FF /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB98DE923F016720041A1FF /* AmazonAd.framework */; };
 		9FB98DEC23F017BE0041A1FF /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB98DEB23F017BE0041A1FF /* GoogleUtilities.framework */; };
 		9FBB4727227B513900310AC4 /* 564944.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB4725227B513800310AC4 /* 564944.png */; };
 		9FBB4728227B513900310AC4 /* 564943.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB4726227B513900310AC4 /* 564943.png */; };
@@ -85,7 +84,6 @@
 		9FB98DEB23F017BE0041A1FF /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBB4725227B513800310AC4 /* 564944.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 564944.png; sourceTree = "<group>"; };
 		9FBB4726227B513900310AC4 /* 564943.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 564943.png; sourceTree = "<group>"; };
-		9FBF62B922598D0600674E57 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = "../Amazon-iOS-SDKs/AmazonMobileAds/AmazonAd.framework"; sourceTree = "<group>"; };
 		9FBF63302259914700674E57 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		9FBF63322259929800674E57 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9FBF6334225992B100674E57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB98DEC23F017BE0041A1FF /* GoogleUtilities.framework in Frameworks */,
-				9FB98DEA23F016730041A1FF /* AmazonAd.framework in Frameworks */,
 				9F27D4A5227893CB00F860BF /* iAd.framework in Frameworks */,
 				9FBF633D225992ED00674E57 /* AdSupport.framework in Frameworks */,
 				9F27D4A3227893A500F860BF /* AudioToolbox.framework in Frameworks */,
@@ -209,7 +206,6 @@
 				9FBF6334225992B100674E57 /* CoreGraphics.framework */,
 				9FBF63322259929800674E57 /* SafariServices.framework */,
 				9FBF63302259914700674E57 /* JavaScriptCore.framework */,
-				9FBF62B922598D0600674E57 /* AmazonAd.framework */,
 				2B690A34F012B3A9A1D41676 /* Pods_StackingTimer.framework */,
 				3D849FDC742D5590652288B0 /* Pods_StackingTimerTests.framework */,
 				B1B3226C63BBA24B2D03C565 /* Pods_StackingTimerUITests.framework */,
@@ -675,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = M4VQ92VYMK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,7 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = M4VQ92VYMK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
